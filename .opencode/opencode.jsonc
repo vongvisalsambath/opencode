@@ -1,7 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "buildnest-gateway/claude-opus-5-5",
+  "model": "miraiapi/claude-opus-5.5",
   "providers": {
+    "miraiapi": {
+      "name": "Mirai API",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.miraiapi.com/v1",
+      },
+      "models": {
+        "claude-opus-5.5": { "name": "claude-opus-5.5" },
+      },
+    },
     "buildnest-gateway": {
       "name": "BuildNest Gateway",
       "env": ["BUILDNEST_GATEWAY_API_KEY"],
